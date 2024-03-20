@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscaminas</title>
+  <meta property="og:title" content="Buscaminas">
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body unselectable="on">
+    <h1 style="text-align: center;">Buscaminas</h1>
+    <div style="text-align: center;">
+        <img src="bomba1.png" alt="bomba">
+    </div>
+  <div class="gameContainer">
+    <div class="gameCanvas">
+      <canvas id="gameController"></canvas>
+    </div>
+    <div class="gameBar" id="gameBar">
+      <div class="gameCell">
+        <div id="gameMines"></div>
+      </div>
+      <div class="gameCell">
+        <button class="resetButton" id="gameEmote" type="button" onclick="resetGame()" ></button>
+      </div>
+      <div class="gameCell">
+        <div id="gameTimer"></div>
+      </div>
+    </div>
+    <div class="gameSettings" id="gameSettings">
+      <p class="gameSettingsLinks" >Juego Personalizado
+        <br />
+        <a href="javascript:openModal()" style="display: inline-block; color: orange;">Personalizar</a>
+      </p>
+    </div>
+  </div>
+ 
+  <div id="customGameModal" class="modal">
+    <div class="modal-content">
+      <h4>Juego personalizado</h4>
+      <span>
+        <label for="customGameWidth">Ancho:</label>
+        <input type="text" id="customGameWidth">
+        <label for="customGameHeight">Alto:</label>
+        <input type="text" id="customGameHeight">
+        <label for="customGameMines">Minas:</label>
+        <input type="text" id="customGameMines">
+      </span>
+      <div class="modal-buttons">
+        <button id="closeModal" type="button" onclick="closeModal()">Cerrar</button>
+        <button id="applyCustomGame" type="button" onclick="applyCustomGame()">Aplicar</button>
+      </div>
+      <p id="modal-msg"></p>
+    </div>
+  </div>
+</body>
+</html>
