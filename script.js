@@ -1,27 +1,3 @@
-var gridWidth;
-var gridHeight;
-var maxMines;
-var maxGameMines;
-var totalTiles;
-var minesLeft;
-var tilesToClick;
-var tileSize;
-var textOffsets;
-
-const tileBomb = -1;
-const tileDefault = 0;
-const tileFlagged = 1;
-const tileUnsure = 2;
-const tileClicked = 3;
-
-let gridClicked = [];
-let gameState = [];
-let gameStarted = false;
-let gameOver = false;
-let timer = 0;
-
-let selectedTextSize = defaultSize;
-
 const defaultSetting = 'beginner';
 const defaultSize = 'medium';
 const gameSettings = {
@@ -66,7 +42,29 @@ const textOffsetSettings = {
   }
 };
 
+var gridWidth;
+var gridHeight;
+var maxMines;
+var maxGameMines;
+var totalTiles;
+var minesLeft;
+var tilesToClick;
+var tileSize;
+var textOffsets;
 
+const tileBomb = -1;
+const tileDefault = 0;
+const tileFlagged = 1;
+const tileUnsure = 2;
+const tileClicked = 3;
+
+let gridClicked = [];
+let gameState = [];
+let gameStarted = false;
+let gameOver = false;
+let timer = 0;
+
+let selectedTextSize = defaultSize;
 
 window.onload = function () {
   canv = document.getElementById("gameController");
